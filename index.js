@@ -1,8 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
     const saveButton = document.querySelector(".submitcancel button:last-child");
-  
-    // Function to display an error message below the input field
+     {
+        const hamburgur = document.querySelector(".handburgerimg"); // Ensure correct class selection
+        const leftSection = document.querySelector(".leftsection1");
+        const rightsection=document.querySelector(".rightsection2");
+    
+        function toggleHamburger() {
+            console.log("Hamburger menu clicked"); // Debugging
+            if (leftSection.style.display === "block") {
+                leftSection.style.display = "none";
+                leftSection.style.width="20%";
+
+            } else {
+                leftSection.style.display = "block";
+                leftSection.style.width="50%";
+            }
+        }
+    
+        // Attach the event listener properly
+        hamburgur.addEventListener("click", toggleHamburger);
+    }
     function showError(input, message) {
       let errorElement = input.nextElementSibling;
   
@@ -81,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (isValid) {
         console.clear();
         console.log("✅ Form Data Submitted:", formData);
-        
+
 
       }
     });
