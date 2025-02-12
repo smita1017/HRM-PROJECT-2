@@ -5,16 +5,23 @@ document.addEventListener("DOMContentLoaded", function () {
         const hamburgur = document.querySelector(".handburgerimg"); // Ensure correct class selection
         const leftSection = document.querySelector(".leftsection1");
         const rightsection=document.querySelector(".rightsection2");
-    
+      const headerright=document.querySelector("headerright");
         function toggleHamburger() {
             console.log("Hamburger menu clicked"); // Debugging
-            if (leftSection.style.display === "block") {
+            if (leftSection.style.display === "block")
+               {
                 leftSection.style.display = "none";
-                leftSection.style.width="20%";
+                hamburgur.style.display = "block";
+                rightsection.style.display = "block";
+                rightsection.style.width="100%";
+
 
             } else {
                 leftSection.style.display = "block";
-                leftSection.style.width="50%";
+                leftSection.style.width="35%";
+                rightsection.style.width="65%";
+                hamburgur.style.display="block"
+                headerright.style.display="block";
             }
         }
     
