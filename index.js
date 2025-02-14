@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('resize', () => {
         if (window.innerWidth > 600) {
             leftSection.classList.remove('active');
+            leftSection.style.width="100%"
         }
     });
     saveButton.addEventListener("click", function (event) {

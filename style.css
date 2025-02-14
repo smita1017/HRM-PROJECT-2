@@ -302,6 +302,10 @@ display: none
 
 @media(max-width: 600px) {
 
+
+  body{
+      position: relative;
+  }
   .h2div{
     width: 60%;
     display: flex;
@@ -409,23 +413,20 @@ form{
     background-color: #6c03c0;
     border-radius: 50%;
     padding: 0.5%;
+    z-index: 12345;
     }
     .leftsection1{
         display: none;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        width: 22%;
-        transition: transform 0.3s ease;
+        position: absolute;
+      }
 
-    }
     .leftsection1.active{
       display:block;
-      width: 50%;
-      transition: all 0.4s ease /* Smooth transition */
-
-
-    }
+      width: 100%;
+      transition: all 0.4s linear /* Smooth transition */;
+      z-index: 1;
+      
+      }
     .h2div{
       width: 100%;
       margin-left: 0;
