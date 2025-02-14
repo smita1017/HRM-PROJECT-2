@@ -13,10 +13,11 @@ justify-content: center;
 height: 100vh;
 width: 100vw;
 background-color: #f5f5f5;
+gap: 1rem;
 }
 
-.handburger{
-    display: none;
+.expand_left_img{
+display: none;
 }
 .leftsection1{
     display: flex;
@@ -25,14 +26,29 @@ background-color: #f5f5f5;
     height: 100%;
     width: 22%;
 }
+.h2div{
+  box-sizing: border-box;
+  width: 80%;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  margin-left: 2rem;
+}
+.form{
+  width: 100%;
+}
 .rightsection2{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
     height: 100%;
     width: 78%;
-  
-    /* background-color: #6c03c0; */
+    position: relative;
+   /* background-color: #6c03c0; */
 }
 .hederitem {
-    padding: 0.5rem;
+  padding: 0.5rem;
   /* box-shadow: 0px 0px 10px 1px rgb(206, 201, 201); */
   display: flex;
   justify-content:center;
@@ -41,6 +57,7 @@ background-color: #f5f5f5;
   background-color: white;
   padding-left: 1rem;
   padding-right: 1rem;
+  margin-bottom: 0.5rem;
   border-color:  #f5f5f5;;
   height: 10%;
   width: 100%;
@@ -143,8 +160,12 @@ label {
   justify-content: center;
   flex-direction: column;
   gap: 1.5rem;
-  height: 80%;
+  height: 90%;
   width: 100%;
+  border: 1px solid rgba(128, 128, 128, 0.445);
+  padding-top: 1rem;
+
+
 }
 form {
   display: flex;
@@ -222,14 +243,17 @@ h2 {
     background-color: #0a1329;
     border-radius: 0.5rem;
   }
-
-  .middlescreenlogodiv {
-    width: 100%;
+  .expand_left_img{
+display: none
+    }
+  .h2div{
+    width: 60%;
+    margin-left: 0.2rem;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
-
+  .form{
+    width: 100%;
+  }
   .leftsection1 {
     width: 30%;
   }
@@ -276,16 +300,25 @@ h2 {
   }
 }
 
-
-
-
 @media(max-width: 600px) {
-  .leftsection1 {
-    display: none; /* Initially hidden */
-}
+
+  .h2div{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 0.5rem;
+    padding-bottom: 1rem;
+
+  }
+  .form{
+    width: 100%;
+  }
+
  h2{
   font-size: 1.5rem;
   text-align: center;
+  
  }
  label{
     width: 9rem;
@@ -295,12 +328,13 @@ h2 {
  }
  .rightsection2{
     height: 100%;
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content:start;
     align-items:start;
     flex-direction: column;
     gap:0.1rem;
+    position: relative;
  }
 .hederitem{
     width: 100%;
@@ -330,16 +364,6 @@ form{
     margin-left:0.5rem;
     
 }
-.handburger{
-    display: block;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-.handburgerimg{
-  height: 100%;
-  width: 100%;
-}
 .innermaindiv{
     display: flex;
     align-items:start;
@@ -367,18 +391,49 @@ form{
     align-items: center;
     justify-content: center;
   }
-  .btn{
-    display: none;
-  }
   .submitcancel{
     width: 100%;
     height: 15%;
     font-size: 4rem;
   }
-  .middlescreenlogo{
-    display: none;
-  }
   .submitcancel button{
     padding:0.2rem;
   }
+
+  .expand_left_img{
+    display: block;
+    position: absolute;
+    top: 3%;
+    left: -3.5%;
+    color: white;
+    background-color: #6c03c0;
+    border-radius: 50%;
+    padding: 0.5%;
+    }
+    .leftsection1{
+        display: none;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 22%;
+        transition: transform 0.3s ease;
+
+    }
+    .leftsection1.active{
+      display:block;
+      width: 50%;
+      transition: all 0.4s ease /* Smooth transition */
+
+
+    }
+    .h2div{
+      width: 100%;
+      margin-left: 0;
+      align-items: start;
+      justify-content: start;
+    }
+.headerleft{
+  /* background-color: red; */
+width: 70%;
+}
 }
